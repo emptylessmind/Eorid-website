@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact the Eorid team with questions, feedback, privacy concerns, or security issues.",
+};
+
 export default function ContactPage() {
   return (
     <main>
