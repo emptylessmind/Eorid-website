@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Features",
+  description:
+    "Explore Eorid features including private conversations, personal AI, files, and social connections.",
+};
+
 export default function FeaturesPage() {
   return (
     <main>
