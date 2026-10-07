@@ -43,6 +43,26 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Eorid",
+      url: "https://eroid.vercel.app",
+      description:
+        "A private social and AI platform designed around you.",
+    },
+    {
+      "@type": "WebSite",
+      name: "Eorid",
+      url: "https://eroid.vercel.app",
+      description:
+        "Your private digital world.",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,6 +74,13 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
       </body>
     </html>
   );
