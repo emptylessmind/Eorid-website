@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description:
+    "Read the Eorid Terms of Service covering account use, acceptable use, user content, and the Eorid service.",
+};
+
 export default function TermsPage() {
   return (
     <main>
