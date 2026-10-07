@@ -2,24 +2,28 @@ import Link from "next/link";
 
 const features = [
   {
-    title: "Private conversations",
+    number: "01",
+    title: "Private by design",
     description:
-      "Connect with people through private messaging designed around control and privacy.",
+      "Your conversations, files, and personal space are built around privacy and control.",
   },
   {
+    number: "02",
     title: "Personal AI",
     description:
-      "Build an AI experience that adapts to your preferences, personality, and workflow.",
+      "An AI experience that learns your preferences and grows with you without losing your identity.",
   },
   {
-    title: "Your files",
+    number: "03",
+    title: "Your digital world",
     description:
-      "Keep your personal images, documents, and other files close to your digital life.",
+      "Messages, people, files, and AI come together in one connected personal experience.",
   },
   {
-    title: "Social",
+    number: "04",
+    title: "Built around you",
     description:
-      "Discover people, connect with friends, and build your own digital community.",
+      "Eorid is designed to adapt to the way you communicate, work, create, and connect.",
   },
 ];
 
@@ -28,13 +32,20 @@ export default function HomePage() {
     <main>
       <section className="hero">
         <div className="hero-content">
-          <p className="eyebrow">EORID</p>
+          <p className="eyebrow">EORID / 01</p>
 
-          <h1>Your private digital world.</h1>
+          <h1>
+            Your
+            <br />
+            private
+            <br />
+            digital world.
+          </h1>
 
           <p className="hero-description">
-            A private social and AI platform designed around you, your
-            conversations, your files, and your personal AI.
+            A new kind of social and AI platform — designed around your
+            identity, your conversations, your files, and the way you live
+            digitally.
           </p>
 
           <div className="hero-actions">
@@ -43,7 +54,7 @@ export default function HomePage() {
             </Link>
 
             <Link className="button button-secondary" href="/features">
-              Explore features
+              Discover Eorid
             </Link>
           </div>
         </div>
@@ -51,21 +62,25 @@ export default function HomePage() {
 
       <section className="intro">
         <div>
-          <p className="eyebrow">ONE PLATFORM</p>
+          <p className="eyebrow">THE IDEA / 02</p>
 
-          <h2>Everything that matters to you, together.</h2>
+          <h2>One place for the digital parts of your life.</h2>
 
           <p>
-            Eorid brings communication, social connections, personal
-            files, and AI into one experience built around your control.
+            Eorid brings communication, social connections, personal files,
+            and AI together without treating your digital life like a
+            collection of separate products.
           </p>
         </div>
       </section>
 
       <section className="feature-grid">
         {features.map((feature) => (
-          <article className="feature-card" key={feature.title}>
+          <article className="feature-card" key={feature.number}>
+            <span className="feature-number">{feature.number}</span>
+
             <h2>{feature.title}</h2>
+
             <p>{feature.description}</p>
           </article>
         ))}
@@ -73,14 +88,14 @@ export default function HomePage() {
 
       <section className="ai-section">
         <div>
-          <p className="eyebrow">EORID AI</p>
+          <p className="eyebrow">EORID AI / 03</p>
 
-          <h2>An AI that grows with you.</h2>
+          <h2>Your AI should know you.</h2>
 
           <p>
             Your AI experience is designed to remain personal across
-            devices and compatible models, with your preferences and
-            identity staying under your control.
+            compatible models and devices. Your preferences, personality,
+            and identity stay connected to you.
           </p>
 
           <Link className="text-link" href="/ai">
@@ -90,9 +105,9 @@ export default function HomePage() {
       </section>
 
       <section className="final-cta">
-        <p className="eyebrow">THE FUTURE IS PERSONAL</p>
+        <p className="eyebrow">THE BEGINNING / 04</p>
 
-        <h2>Build your digital world with Eorid.</h2>
+        <h2>Build a digital world that feels like yours.</h2>
 
         <Link className="button button-primary" href="/download">
           Get Eorid
