@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function FeaturesPage() {
   return (
     <main>
-      <section>
+      <section className="page-section">
         <p>Eorid</p>
 
         <h1>Everything in one private place.</h1>
