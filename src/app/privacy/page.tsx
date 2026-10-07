@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy",
+  description:
+    "Learn how Eorid approaches privacy, local-first data, personal AI, and user control.",
+};
+
 export default function PrivacyPage() {
   return (
     <main>
