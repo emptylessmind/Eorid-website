@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about Eorid and our vision for a private digital world built around people, communication, files, and personal AI.",
+};
+
 export default function AboutPage() {
   return (
     <main>
