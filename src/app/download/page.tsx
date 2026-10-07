@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Download",
+  description:
+    "Find Eorid for Windows, macOS, iPhone, iPad, and Android as the platform becomes available.",
+};
+
 export default function DownloadPage() {
   return (
     <main>
