@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 
+import SiteFooter from "./components/SiteFooter";
+import SiteHeader from "./components/SiteHeader";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eorid.vercel.app"),
+  metadataBase: new URL("https://eroid.vercel.app"),
   title: {
     default: "Eorid — Your private digital world",
     template: "%s | Eorid",
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     title: "Eorid — Your private digital world",
     description:
       "A private social and AI platform designed around you.",
-    url: "https://eorid.vercel.app",
+    url: "https://eroid.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
@@ -48,7 +50,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
