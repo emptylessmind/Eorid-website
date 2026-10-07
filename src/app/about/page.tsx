@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <section>
+      <section className="page-section">
         <p>Eorid</p>
 
         <h1>Built around you.</h1>
@@ -19,11 +19,15 @@ export default function AboutPage() {
           files, and personal AI together in one private environment.
         </p>
 
-        <p>
-          Our goal is to give people more control over their digital
-          lives while making technology feel personal, useful, and
-          connected.
-        </p>
+        <div>
+          <h2>Our vision</h2>
+
+          <p>
+            Our goal is to give people more control over their digital
+            lives while making technology feel personal, useful, and
+            connected.
+          </p>
+        </div>
       </section>
     </main>
   );
