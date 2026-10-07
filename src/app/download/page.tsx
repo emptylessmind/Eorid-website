@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function DownloadPage() {
   return (
     <main>
-      <section>
+      <section className="page-section">
         <p>Eorid</p>
 
         <h1>Get Eorid.</h1>
