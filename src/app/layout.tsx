@@ -6,13 +6,17 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eroid.vercel.app"),
+
   title: {
     default: "Eorid — Your private digital world",
     template: "%s | Eorid",
   },
+
   description:
     "Eorid is a private social and AI platform designed around you, your conversations, your files, and your personal AI.",
+
   applicationName: "Eorid",
+
   keywords: [
     "Eorid",
     "private social platform",
@@ -20,13 +24,20 @@ export const metadata: Metadata = {
     "AI assistant",
     "private messaging",
   ],
+
   authors: [{ name: "Eorid" }],
   creator: "Eorid",
   publisher: "Eorid",
+
+  alternates: {
+    canonical: "https://eroid.vercel.app",
+  },
+
   robots: {
     index: true,
     follow: true,
   },
+
   openGraph: {
     type: "website",
     siteName: "Eorid",
@@ -34,12 +45,22 @@ export const metadata: Metadata = {
     description:
       "A private social and AI platform designed around you.",
     url: "https://eroid.vercel.app",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Eorid — Your private digital world",
+      },
+    ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Eorid — Your private digital world",
     description:
       "A private social and AI platform designed around you.",
+    images: ["/twitter-image"],
   },
 };
 
@@ -57,8 +78,7 @@ const structuredData = {
       "@type": "WebSite",
       name: "Eorid",
       url: "https://eroid.vercel.app",
-      description:
-        "Your private digital world.",
+      description: "Your private digital world.",
     },
   ],
 };
