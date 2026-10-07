@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AIPage() {
   return (
     <main>
-      <section>
+      <section className="page-section">
         <p>Eorid AI</p>
 
         <h1>Your AI. Your way.</h1>
