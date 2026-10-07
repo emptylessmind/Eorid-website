@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Eorid AI",
+  description:
+    "Discover Eorid AI, a personal AI experience designed around your preferences, privacy, identity, and compatible local models.",
+};
+
 export default function AIPage() {
   return (
     <main>
