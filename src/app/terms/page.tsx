@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <main>
-      <section>
+      <section className="page-section">
         <p>Eorid Terms</p>
 
         <h1>Terms of Service</h1>
@@ -19,36 +19,39 @@ export default function TermsPage() {
           establish a safe and reliable environment for everyone.
         </p>
 
-        <h2>Using Eorid</h2>
-        <p>
-          You are responsible for maintaining the security of your
-          account and for activity performed through it.
-        </p>
+        <div>
+          <h2>Using Eorid</h2>
+          <p>
+            You are responsible for maintaining the security of your
+            account and for activity performed through it.
+          </p>
 
-        <h2>Acceptable use</h2>
-        <p>
-          Eorid must not be used for unlawful activity, abuse, fraud,
-          harassment, or activity that harms other users or the service.
-        </p>
+          <h2>Acceptable use</h2>
+          <p>
+            Eorid must not be used for unlawful activity, abuse, fraud,
+            harassment, or activity that harms other users or the
+            service.
+          </p>
 
-        <h2>Your content</h2>
-        <p>
-          You retain control over content you create and share through
-          Eorid, subject to the permissions and features you choose to
-          use.
-        </p>
+          <h2>Your content</h2>
+          <p>
+            You retain control over content you create and share through
+            Eorid, subject to the permissions and features you choose to
+            use.
+          </p>
 
-        <h2>Service changes</h2>
-        <p>
-          Eorid may evolve over time as features, security measures,
-          and supported platforms improve.
-        </p>
+          <h2>Service changes</h2>
+          <p>
+            Eorid may evolve over time as features, security measures,
+            and supported platforms improve.
+          </p>
 
-        <h2>Questions</h2>
-        <p>
-          If you have questions about these terms, please contact the
-          Eorid team.
-        </p>
+          <h2>Questions</h2>
+          <p>
+            If you have questions about these terms, please contact the
+            Eorid team.
+          </p>
+        </div>
       </section>
     </main>
   );
