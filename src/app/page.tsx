@@ -1,3 +1,4 @@
+```tsx
 import Link from "next/link";
 
 const features = [
@@ -5,25 +6,29 @@ const features = [
     number: "01",
     title: "Private by design",
     description:
-      "Your conversations, files, and personal space are built around privacy and control.",
+      "Your conversations, files, and personal space are built around privacy, ownership, and control.",
+    label: "Privacy",
   },
   {
     number: "02",
     title: "Personal AI",
     description:
-      "An AI experience that learns your preferences and grows with you without losing your identity.",
+      "Your AI experience can adapt to your preferences, personality, and identity while remaining connected to you.",
+    label: "Intelligence",
   },
   {
     number: "03",
-    title: "Your digital world",
+    title: "Everything connected",
     description:
-      "Messages, people, files, and AI come together in one connected personal experience.",
+      "Messages, people, files, and AI come together in one coherent personal digital environment.",
+    label: "Connection",
   },
   {
     number: "04",
     title: "Built around you",
     description:
-      "Eorid is designed to adapt to the way you communicate, work, create, and connect.",
+      "Eorid is designed to adapt to the way you communicate, work, create, and live digitally.",
+    label: "Personal",
   },
 ];
 
@@ -73,7 +78,9 @@ export default function HomePage() {
         <div>
           <p className="eyebrow">THE IDEA / 02</p>
 
-          <h2>One place for the digital parts of your life.</h2>
+          <h2>
+            One place for the digital parts of your life.
+          </h2>
 
           <p>
             Eorid brings communication, social connections, personal files,
@@ -86,11 +93,25 @@ export default function HomePage() {
       <section className="feature-grid">
         {features.map((feature) => (
           <article className="feature-card" key={feature.number}>
-            <span className="feature-number">{feature.number}</span>
+            <div className="feature-card-top">
+              <span className="feature-number">
+                {feature.number}
+              </span>
 
-            <h2>{feature.title}</h2>
+              <span className="feature-label">
+                {feature.label}
+              </span>
+            </div>
 
-            <p>{feature.description}</p>
+            <div className="feature-card-content">
+              <h2>{feature.title}</h2>
+
+              <p>{feature.description}</p>
+            </div>
+
+            <span className="feature-arrow" aria-hidden="true">
+              ↗
+            </span>
           </article>
         ))}
       </section>
@@ -116,7 +137,14 @@ export default function HomePage() {
       <section className="final-cta">
         <p className="eyebrow">THE BEGINNING / 04</p>
 
-        <h2>Build a digital world that feels like yours.</h2>
+        <h2>
+          Build a digital world that feels like yours.
+        </h2>
+
+        <p className="final-cta-description">
+          Eorid is being built around privacy, identity, connection,
+          and personal intelligence.
+        </p>
 
         <Link className="button button-primary" href="/download">
           Get Eorid
@@ -125,3 +153,4 @@ export default function HomePage() {
     </main>
   );
 }
+```
