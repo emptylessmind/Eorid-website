@@ -1,3 +1,4 @@
+```css
 :root {
   --background: #ffffff;
   --foreground: #111111;
@@ -131,13 +132,13 @@ header nav {
     color 0.2s ease;
 }
 
-.eorid-logo-name {
-  line-height: 1;
-}
-
 .eorid-logo-mark svg {
   width: 18px;
   height: 18px;
+}
+
+.eorid-logo-name {
+  line-height: 1;
 }
 
 /* Header Navigation */
@@ -198,6 +199,7 @@ main {
 }
 
 .hero {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: calc(100vh - 76px);
@@ -205,6 +207,8 @@ main {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 1000px;
 }
 
@@ -229,6 +233,58 @@ main {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 38px;
+}
+
+/* Hero Visual */
+
+.hero-visual {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 420px;
+  height: 420px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.hero-orbit {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.hero-orbit-one {
+  transform: rotate(28deg) scaleX(0.62);
+}
+
+.hero-orbit-two {
+  transform: rotate(-28deg) scaleX(0.62);
+}
+
+.hero-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 116px;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--foreground);
+  border-radius: 50%;
+  background: var(--background);
+  box-shadow:
+    0 0 0 18px color-mix(in srgb, var(--background) 82%, transparent),
+    0 0 0 19px var(--border);
+}
+
+.hero-core span {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
 }
 
 /* Buttons */
@@ -561,8 +617,10 @@ footer > p:last-child {
   }
 
   .hero {
-    min-height: 680px;
-    padding: 60px 0;
+    min-height: auto;
+    padding: 60px 0 90px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero h1 {
@@ -571,6 +629,28 @@ footer > p:last-child {
 
   .hero-description {
     margin-top: 34px;
+  }
+
+  .hero-visual {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 260px;
+    height: 260px;
+    margin: 70px auto 0;
+    transform: none;
+  }
+
+  .hero-core {
+    width: 82px;
+    height: 82px;
+    box-shadow:
+      0 0 0 12px color-mix(in srgb, var(--background) 82%, transparent),
+      0 0 0 13px var(--border);
+  }
+
+  .hero-core span {
+    font-size: 1.8rem;
   }
 
   .feature-grid {
@@ -622,3 +702,4 @@ footer > p:last-child {
     width: min(100% - 32px, 1180px);
   }
 }
+```
