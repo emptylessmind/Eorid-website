@@ -1,4 +1,3 @@
-```css
 :root {
   --background: #ffffff;
   --foreground: #111111;
@@ -762,4 +761,4 @@ footer > p:last-child {
     width: min(100% - 32px, 1180px);
   }
 }
-```
+
