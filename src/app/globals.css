@@ -1,3 +1,4 @@
+ id="m8k2vz"
 :root {
   --background: #ffffff;
   --foreground: #111111;
@@ -395,37 +396,79 @@ main {
 }
 
 .feature-card {
-  min-height: 340px;
-  padding: 42px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px;
+  padding: 38px;
+  overflow: hidden;
   background: var(--background);
   transition:
     background 0.25s ease,
-    color 0.25s ease;
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .feature-card:hover {
   background: var(--surface);
 }
 
+.feature-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .feature-number {
   display: block;
-  margin-bottom: 80px;
   color: var(--muted);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
 
+.feature-label {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.feature-card-content {
+  max-width: 500px;
+  margin-top: 70px;
+}
+
 .feature-card h2 {
-  font-size: 1.7rem;
-  letter-spacing: -0.04em;
+  font-size: 1.9rem;
+  letter-spacing: -0.05em;
 }
 
 .feature-card p {
-  max-width: 430px;
+  max-width: 440px;
   margin-top: 16px;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.feature-arrow {
+  position: absolute;
+  right: 34px;
+  bottom: 30px;
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.feature-card:hover .feature-arrow {
+  color: var(--foreground);
+  transform: translate(3px, -3px);
 }
 
 /* AI section */
@@ -452,6 +495,14 @@ main {
   padding-bottom: 3px;
   border-bottom: 1px solid var(--foreground);
   font-weight: 600;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.text-link:hover {
+  opacity: 0.65;
+  transform: translateX(3px);
 }
 
 /* Final CTA */
@@ -462,7 +513,15 @@ main {
 
 .final-cta h2 {
   max-width: 900px;
-  margin-bottom: 42px;
+  margin-bottom: 28px;
+}
+
+.final-cta-description {
+  max-width: 620px;
+  margin-bottom: 38px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 /* Public pages */
@@ -717,12 +776,21 @@ footer > p:last-child {
   }
 
   .feature-card {
-    min-height: 300px;
+    min-height: 320px;
     padding: 30px;
   }
 
-  .feature-number {
-    margin-bottom: 60px;
+  .feature-card-content {
+    margin-top: 55px;
+  }
+
+  .feature-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .feature-arrow {
+    right: 28px;
+    bottom: 26px;
   }
 
   .intro,
@@ -732,6 +800,10 @@ footer > p:last-child {
 
   .final-cta {
     padding: 90px 0 140px;
+  }
+
+  .final-cta-description {
+    margin-bottom: 32px;
   }
 
   .page-section {
