@@ -1,4 +1,3 @@
-```tsx
 import Link from "next/link";
 
 const features = [
@@ -153,4 +152,4 @@ export default function HomePage() {
     </main>
   );
 }
-```
+
