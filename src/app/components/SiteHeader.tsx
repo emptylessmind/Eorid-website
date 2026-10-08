@@ -1,10 +1,12 @@
 import Link from "next/link";
 
+import EoridLogo from "./EoridLogo";
+
 export default function SiteHeader() {
   return (
     <header>
       <nav aria-label="Main navigation">
-        <Link href="/">Eorid</Link>
+        <EoridLogo />
 
         <div>
           <Link href="/about">About</Link>
