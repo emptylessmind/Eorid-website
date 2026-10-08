@@ -58,6 +58,15 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+
+        <div className="hero-visual" aria-hidden="true">
+          <div className="hero-orbit hero-orbit-one" />
+          <div className="hero-orbit hero-orbit-two" />
+
+          <div className="hero-core">
+            <span>E</span>
+          </div>
+        </div>
       </section>
 
       <section className="intro">
