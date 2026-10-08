@@ -39,6 +39,9 @@ body {
     sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 a {
@@ -93,14 +96,46 @@ header nav {
   margin: 0 auto;
 }
 
-header nav > a {
+/* Eorid Logo */
+
+.eorid-logo {
   display: inline-flex;
   align-items: center;
+  gap: 9px;
   color: var(--foreground);
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 800;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.06em;
+  transition: opacity 0.2s ease;
 }
+
+.eorid-logo:hover {
+  color: var(--foreground);
+  opacity: 0.78;
+}
+
+.eorid-logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: var(--accent-foreground);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.eorid-logo-name {
+  line-height: 1;
+}
+
+/* Header Navigation */
 
 header nav div {
   display: flex;
@@ -219,7 +254,7 @@ main {
 }
 
 .button-primary:hover {
-  background: #333333;
+  background: var(--foreground);
 }
 
 .button-secondary {
@@ -272,7 +307,9 @@ main {
   min-height: 340px;
   padding: 42px;
   background: var(--background);
-  transition: background 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
 .feature-card:hover {
@@ -321,9 +358,9 @@ main {
 .text-link {
   display: inline-block;
   margin-top: 32px;
-  font-weight: 600;
-  border-bottom: 1px solid var(--foreground);
   padding-bottom: 3px;
+  border-bottom: 1px solid var(--foreground);
+  font-weight: 600;
 }
 
 /* Final CTA */
@@ -481,8 +518,14 @@ footer > p:last-child {
     width: min(100% - 24px, 1180px);
   }
 
-  header nav > a {
-    font-size: 1.2rem;
+  .eorid-logo {
+    font-size: 1.05rem;
+  }
+
+  .eorid-logo-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
   }
 
   header nav div {
@@ -503,7 +546,7 @@ footer > p:last-child {
     white-space: nowrap;
     font-size: 0.76rem;
   }
-  
+
   .hero,
   .intro,
   .feature-grid,
@@ -561,16 +604,16 @@ footer > p:last-child {
     padding: 24px;
   }
 
-  footer {
-    width: min(100% - 32px, 1180px);
-  }
-
-    .footer-top {
+  .footer-top {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .social-links {
     gap: 8px;
+  }
+
+  footer {
+    width: min(100% - 32px, 1180px);
   }
 }
